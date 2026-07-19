@@ -1,14 +1,45 @@
 .splash-screen {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
+  width: auto;
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.intro-video {
-  width: 100vw;
+.introVideo {
+  width: 90%;
+  max-width: 900px;
   height: auto;
+}
+
+.splash-start {
+  position: absolute;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.splash-start:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.HomePage {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.HomePage img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }

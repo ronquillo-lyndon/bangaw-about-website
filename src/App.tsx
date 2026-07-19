@@ -1,7 +1,7 @@
-import { useState, type JSX } from 'react'
-import SplashScreen from './components/SplashScreen'
-import './App.css'
-
+import { useState, type JSX } from 'react';
+import SplashScreen from './components/SplashScreen';
+import './App.css';
+import HomePage from './components/HomePage';
 function App():JSX.Element {
   const [showSplash, setShowSplash] = useState<boolean>(true);
 
@@ -11,8 +11,7 @@ function App():JSX.Element {
         <SplashScreen onFinish={() => setShowSplash(false)}/>
         ) : (
           <main>
-            <h1>Welcome to Vanessa</h1>
-            <p>This is the main for temporary</p>
+            <HomePage />
           </main>
         )}
     </>
