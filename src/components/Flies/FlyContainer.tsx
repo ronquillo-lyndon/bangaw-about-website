@@ -1,5 +1,5 @@
 import { useEffect, useState, type JSX } from 'react';
-import Flies, { type Fly } from './AboutFlies';
+import { type Fly } from './AboutFlies';
 
 type FlyContainerProps = {
     fly: Fly;
