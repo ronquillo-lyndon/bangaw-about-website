@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@font-face {
+    font-family: 'PixelifySans';
+    src: url('./assets/font/PixelifySans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Jersey10';
+    src: url('./assets/font/Jersey10.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-pixel: 'PixelifySans', 'Press Start 2P', system-ui, sans-serif;
+    --color-bg: #0f1020;
+    --color-panel: #1b1d3a;
+    --color-panel-2: #262a52;
+    --color-accent: #ff5d8f;
+    --color-accent-2: #5dd6ff;
+    --color-text: #f4f4ff;
+    --color-muted: #b9bce0;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(93, 214, 255, 0.15), transparent 60%),
+        radial-gradient(1000px 500px at 100% 0%, rgba(255, 93, 143, 0.15), transparent 55%),
+        var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-pixel);
+    -webkit-font-smoothing: antialiased;
+}
+
+#root {
+    min-height: 100vh;
+}

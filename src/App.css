@@ -43,3 +43,194 @@
   max-width: 100%;
   display: block;
 }
+
+.fly-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 48px auto;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-panel);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.fly-name {
+  text-align: center;
+  margin: 0 0 8px;
+  width: 100%;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+.fly-body {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 16px;
+}
+
+.fly-left {
+  flex: 1 1 340px;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  background: var(--color-panel-2);
+  border-radius: 12px;
+  border: 1px solid rgba(93, 214, 255, 0.18);
+}
+
+.action-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-accent-2);
+  text-align: center;
+}
+
+.sprite-viewport {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.04) 0 10px, transparent 10px 20px),
+    var(--color-bg);
+  cursor: pointer;
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.5);
+}
+
+.sprite-strip {
+  display: flex;
+  height: 100%;
+  will-change: transform;
+}
+
+.sprite-img {
+  height: 100%;
+  width: 100%;
+  flex: 0 0 100%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  image-rendering: pixelated;
+}
+
+.sprite-controls {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: center;
+}
+
+.sprite-controls button {
+  flex: 1;
+  max-width: 130px;
+  padding: 10px 0;
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  color: var(--color-text);
+  background: linear-gradient(180deg, var(--color-accent), #d8456f);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #a93055;
+  transition: transform 0.06s ease, box-shadow 0.06s ease;
+}
+
+.sprite-controls button:hover {
+  filter: brightness(1.08);
+}
+
+.sprite-controls button:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #a93055;
+}
+
+.fly-right {
+  flex: 1 1 340px;
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+  padding: 22px;
+  background: var(--color-panel-2);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 93, 143, 0.18);
+}
+
+.fly-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.flies-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 48px auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flies-viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.flies-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.flies-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.flies-nav {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  font-family: var(--font-pixel);
+  font-size: 1.4rem;
+  color: var(--color-text);
+  background: linear-gradient(180deg, var(--color-accent-2), #2aa8d8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #1c7fa6;
+  transition: transform 0.06s ease, box-shadow 0.06s ease;
+}
+
+.flies-nav:hover {
+  filter: brightness(1.08);
+}
+
+.flies-nav:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #1c7fa6;
+}

@@ -2,6 +2,7 @@ import { useState, type JSX } from 'react';
 import SplashScreen from './components/SplashScreen';
 import './App.css';
 import HomePage from './components/HomePage';
+import FliesContainer from './components/Flies/FliesContainer';
 function App():JSX.Element {
   const [showSplash, setShowSplash] = useState<boolean>(true);
 
@@ -12,6 +13,7 @@ function App():JSX.Element {
         ) : (
           <main>
             <HomePage />
+            <FliesContainer />
           </main>
         )}
     </>
