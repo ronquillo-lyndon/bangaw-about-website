@@ -37,6 +37,12 @@ const FlyContainer = ({ fly }: FlyContainerProps): JSX.Element => {
 
     const frameWidthPercent = 100 / frameCount;
     const translatePercent = frameIndex * frameWidthPercent;
+    const spriteStyle = {
+        backgroundImage: `url(${action.location})`,
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: `${frameCount * 100}% 100%`,
+        backgroundPosition: `${frameIndex * (100 / (frameCount - 1 || 1))}% 0`,
+    };
 
     return (
         <div className='fly-container'>
@@ -44,22 +50,11 @@ const FlyContainer = ({ fly }: FlyContainerProps): JSX.Element => {
             <div className='fly-body'>
                 <div className='fly-left'>
                     <span className='action-name'>{action.action_name}</span>
-                    <div className='sprite-viewport' onClick={togglePlay}>
-                        <div
-                            className='sprite-strip'
-                            style={{
-                                width: `${frameCount * 100}%`,
-                                transform: `translateX(-${translatePercent}%)`
-                            }}
-                        >
-                            <img
-                                src={action.location}
-                                alt={action.action_name}
-                                className='sprite-img'
-                                draggable={false}
-                            />
-                        </div>
-                    </div>
+                    <div
+                        className='sprite-viewport sprite-frame'
+                        style={spriteStyle}
+                        onClick={togglePlay}
+                    />
                     <div className='sprite-controls'>
                         <button onClick={prevAction}>&#8592;</button>
                         <button onClick={nextAction}>&#8594;</button>

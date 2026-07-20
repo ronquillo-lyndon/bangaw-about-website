@@ -115,7 +115,7 @@ const Flies:Fly[] = [
         fly_name: "knight_fly",
         actions:[
             {
-                action_name: "default",
+                action_name: "flying",
                 location: knight_fly,
                 frame: 6
             },
