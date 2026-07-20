@@ -1,3 +1,4 @@
+/*Intro Video*/
 .splash-screen {
   width: auto;
   min-height: 100vh;
@@ -24,10 +25,28 @@
   border-radius: 8px;
   cursor: pointer;
 }
-
+.splash-screen-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  font-family: var(--font-pixel);
+  padding: 20px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 247, 235);
+  background-color:#a93054;
+  border-radius: 5px;
+  border: none;
+}
 .splash-start:hover {
   background: rgba(0, 0, 0, 0.8);
 }
+/*Intro Video*/
 
 .HomePage {
   width: 100%;

@@ -35,8 +35,6 @@ const FlyContainer = ({ fly }: FlyContainerProps): JSX.Element => {
         setActionIndex((i) => (i + 1) % fly.actions.length);
     };
 
-    const frameWidthPercent = 100 / frameCount;
-    const translatePercent = frameIndex * frameWidthPercent;
     const spriteStyle = {
         backgroundImage: `url(${action.location})`,
         backgroundRepeat: 'no-repeat',

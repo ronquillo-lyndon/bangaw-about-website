@@ -5,11 +5,10 @@ import HomePage from './components/HomePage';
 import FliesContainer from './components/Flies/FliesContainer';
 function App():JSX.Element {
   const [showSplash, setShowSplash] = useState<boolean>(true);
-
   return (
     <>
       {showSplash ? (
-        <SplashScreen onFinish={() => setShowSplash(false)}/>
+        <SplashScreen setShowSplash={() => setShowSplash(false)}/>
         ) : (
           <main>
             <HomePage />

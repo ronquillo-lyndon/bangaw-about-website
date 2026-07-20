@@ -2,13 +2,13 @@ import { useRef, useState, type JSX } from 'react';
 import introVideo from '../assets/cutscene/vanessa_cutscene.mp4';
 
 type SplashScreenProps = {
-    onFinish: ()=> void
+    setShowSplash: ()=> void
 }
 
-const SplashScreen = ({onFinish}: SplashScreenProps):JSX.Element => {
+const SplashScreen = ({setShowSplash}: SplashScreenProps):JSX.Element => {
     const videoRef = useRef<HTMLVideoElement>(null);
     const [enableSound, setEnableSound] = useState<boolean>(false);
-
+    //To unmute video
     const handleStart = ():void => {
         const video:HTMLVideoElement | null = videoRef.current;
         if (!video) return;
@@ -22,12 +22,13 @@ const SplashScreen = ({onFinish}: SplashScreenProps):JSX.Element => {
 
     return(
         <div className='splash-screen'>
+            <button className = 'splash-screen-close'onClick={setShowSplash}>X</button>
             <video
                 ref={videoRef}
                 autoPlay
                 muted
                 playsInline
-                onEnded={onFinish}
+                onEnded={setShowSplash}
                 className='introVideo'
             >
                 <source src={introVideo} type='video/mp4' />
