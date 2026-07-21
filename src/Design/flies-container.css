@@ -1,0 +1,53 @@
+.flies-container {
+  position: relative;
+  height: auto;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flies-viewport {
+  flex: 1;
+  overflow: hidden;
+}
+
+.flies-track {
+  display: flex;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.flies-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.flies-nav {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  font-family: var(--font-pixel);
+  font-size: 1.4rem;
+  color: var(--color-text);
+  background: linear-gradient(180deg, var(--color-accent-2), #2aa8d8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #1c7fa6;
+  transition: transform 0.06s ease, box-shadow 0.06s ease;
+}
+
+.flies-nav:hover {
+  filter: brightness(1.08);
+}
+
+.flies-nav:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 #1c7fa6;
+}

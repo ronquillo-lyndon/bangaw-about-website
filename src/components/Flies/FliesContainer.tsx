@@ -1,6 +1,7 @@
 import { useState, type JSX } from 'react';
 import Flies from './AboutFlies';
 import FlyContainer from './FlyContainer';
+import '../../Design/flies-container.css'
 
 const FliesContainer = (): JSX.Element => {
     const [index, setIndex] = useState<number>(0);
@@ -15,22 +16,25 @@ const FliesContainer = (): JSX.Element => {
     const translatePercent = index * 100;
 
     return (
-        <div className='flies-container'>
-            <button className='flies-nav flies-nav-left' onClick={prevFly} aria-label='previous fly'>&#8592;</button>
-            <div className='flies-viewport'>
-                <div
-                    className='flies-track'
-                    style={{ transform: `translateX(-${translatePercent}%)` }}
-                >
-                    {Flies.map((fly) => (
-                        <div className='flies-slide' key={fly.fly_name}>
-                            <FlyContainer fly={fly} />
-                        </div>
-                    ))}
+        <>
+            <div className='Title-part'>LEARN THE FLIES</div>
+            <div className='flies-container'>
+                <button className='flies-nav flies-nav-left' onClick={prevFly} aria-label='previous fly'>&#8592;</button>
+                <div className='flies-viewport'>
+                    <div
+                        className='flies-track'
+                        style={{ transform: `translateX(-${translatePercent}%)` }}
+                    >
+                        {Flies.map((fly) => (
+                            <div className='flies-slide' key={fly.fly_name}>
+                                <FlyContainer fly={fly} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
+                <button className='flies-nav flies-nav-right' onClick={nextFly} aria-label='next fly'>&#8594;</button>
             </div>
-            <button className='flies-nav flies-nav-right' onClick={nextFly} aria-label='next fly'>&#8594;</button>
-        </div>
+        </>    
     );
 };
 

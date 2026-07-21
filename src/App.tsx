@@ -1,8 +1,9 @@
 import { useState, type JSX } from 'react';
 import SplashScreen from './components/SplashScreen';
-import './App.css';
 import HomePage from './components/HomePage';
+import AboutGame from './components/AboutGame';
 import FliesContainer from './components/Flies/FliesContainer';
+import SketchesContainer from './components/Sketch/SketchesContainer';
 function App():JSX.Element {
   const [showSplash, setShowSplash] = useState<boolean>(true);
   return (
@@ -12,7 +13,9 @@ function App():JSX.Element {
         ) : (
           <main>
             <HomePage />
+            <AboutGame />
             <FliesContainer />
+            <SketchesContainer />
           </main>
         )}
     </>

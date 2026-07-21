@@ -1,0 +1,26 @@
+.HomePage {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.HomePage img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.Title-part {
+  margin: 0;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-size: clamp(1.6rem, 20vw, 4.4rem);
+}
+.animator-name {
+  justify-self: end;
+}

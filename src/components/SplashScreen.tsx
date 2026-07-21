@@ -1,6 +1,6 @@
 import { useRef, useState, type JSX } from 'react';
 import introVideo from '../assets/cutscene/vanessa_cutscene.mp4';
-
+import '../Design/splash.css';
 type SplashScreenProps = {
     setShowSplash: ()=> void
 }
