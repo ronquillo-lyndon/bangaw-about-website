@@ -59,7 +59,14 @@ const FlyContainer = ({ fly }: FlyContainerProps): JSX.Element => {
                     </div>
                 </div>
                 <div className='fly-right'>
-                    <p className='fly-description'>{fly.description}</p>
+                    <div className='fly-description'>
+                        {fly.description.sections.map((section) => (
+                            <section className='fly-description-section' key={section.title}>
+                                <h2>{section.title}</h2>
+                                {section.content.map((line, index) => <p key={`${section.title}-${index}`}>{line}</p>)}
+                            </section>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

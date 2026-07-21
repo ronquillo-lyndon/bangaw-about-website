@@ -33,18 +33,20 @@
   flex-wrap: wrap;
   gap: 28px;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
   margin-top: 16px;
 }
 
 .fly-left {
-  flex: 1 1 340px;
+  flex: 0 1 520px;
+  width: 100%;
   max-width: 520px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 18px;
+  padding: 22px;
+  padding-right: 0.5rem;
   background: var(--color-panel-2);
   border-radius: 12px;
   border: 1px solid rgba(93, 214, 255, 0.18);
@@ -98,6 +100,10 @@
     flex: 1 1 auto;
     max-width: 100%;
     padding: 14px;
+    max-height: none;
+    overflow-y: visible;
+    padding-left: 14px;
+    direction: ltr;
   }
 
   .fly-description {
@@ -159,20 +165,71 @@
 }
 
 .fly-right {
-  flex: 1 1 340px;
+  flex: 0 1 520px;
+  width: 100%;
   max-width: 520px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 22px;
   background: var(--color-panel-2);
   border-radius: 12px;
   border: 1px solid rgba(255, 93, 143, 0.18);
+
+  max-height: 70vh;
+  overflow-y: auto;
+
+  direction: rtl;
+}
+
+.fly-right > * {
+  direction: ltr;
 }
 
 .fly-description {
+  width: 100%;
   font-size: 1rem;
-  line-height: 1.7;
-  text-align: justify;
+  line-height: 1.55;
   color: var(--color-muted);
-  margin: 0;
+}
+
+.fly-description-section + .fly-description-section {
+  margin-top: 18px;
+}
+
+.fly-description-section h2 {
+  margin: 0 0 8px;
+  color: var(--color-accent-2);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.fly-description-section p {
+  margin: 3px 0;
+}
+
+.fly-right::-webkit-scrollbar {
+  width: 10px;
+}
+
+.fly-right::-webkit-scrollbar-track {
+  background: var(--color-bg);
+  border-radius: 999px;
+  margin: 8px 0;
+}
+
+.fly-right::-webkit-scrollbar-thumb {
+  background: var(--color-panel-2);
+  border-radius: 999px;
+  border: 2px solid var(--color-bg);
+}
+
+.fly-right::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-2);
+}
+
+.fly-right {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-panel-2) var(--color-bg);
+  scrollbar-gutter: stable;
 }

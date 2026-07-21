@@ -4,6 +4,8 @@ import '../Design/about-game.css';
 
 const AboutGame = (): JSX.Element => {
     return (
+        <>
+        <div className='Title-part'>GAME INTRODUCTION</div>
         <div className='about-game'>
             <div className='about-content'>
                 <h2>Welcome to Vanessa-on-the-loose</h2>
@@ -81,6 +83,7 @@ const AboutGame = (): JSX.Element => {
                 <img src={explaining} alt="Nanay Sita explaining" />
             </div>
         </div>
+        </>
     );
 };
 
