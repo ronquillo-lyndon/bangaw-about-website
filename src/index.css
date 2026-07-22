@@ -40,17 +40,21 @@
     box-sizing: border-box;
 }
 
+html {
+  font-size: clamp(14px, calc(0.875rem + 0.25vw), 16px);
+}
+
 html,
 body {
-    margin: 0;
-    padding: 0;
-    background:
-        radial-gradient(1200px 600px at 20% -10%, rgba(253, 253, 85, 0.18), transparent 60%),
-        radial-gradient(1000px 500px at 100% 0%, rgba(253, 122, 63, 0.18), transparent 55%),
-        var(--color-bg);
-    color: var(--color-text);
-    font-family: var(--font-pixel);
-    -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  background:
+      radial-gradient(1200px 600px at 20% -10%, rgba(253, 253, 85, 0.18), transparent 60%),
+      radial-gradient(1000px 500px at 100% 0%, rgba(253, 122, 63, 0.18), transparent 55%),
+      var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-pixel);
+  -webkit-font-smoothing: antialiased;
 }
 
 #root {

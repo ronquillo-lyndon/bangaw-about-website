@@ -14,12 +14,16 @@
 }
 
 .Title-part {
-  margin: 0;
+  margin-top: 1rem;
   padding-right: 1rem;
   display: flex;
   align-items: center;
   justify-content: end;
-  font-size: clamp(1.6rem, 20vw, 4.4rem);
+  font-size: clamp(1.4rem, 8vw, 3.2rem);
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .animator-name {
   justify-self: end;

@@ -13,6 +13,7 @@
 .flies-viewport {
   flex: 1;
   overflow: hidden;
+  padding: 4px;
 }
 
 .flies-track {
@@ -29,25 +30,41 @@
 }
 
 .flies-nav {
-  flex: 0 0 auto;
-  width: 52px;
-  height: 52px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: clamp(42px, 10vw, 52px);
+  height: clamp(42px, 10vw, 52px);
+  padding: 0;
   font-family: var(--font-pixel);
-  font-size: 1.4rem;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
   color: var(--color-text);
-  background: linear-gradient(180deg, var(--color-accent-2), #2aa8d8);
-  border: none;
+  background: rgba(0, 0, 0, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 0 #1c7fa6;
-  transition: transform 0.06s ease, box-shadow 0.06s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transition: transform 0.12s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.flies-nav-left {
+  left: clamp(8px, 2vw, 20px);
+}
+
+.flies-nav-right {
+  right: clamp(8px, 2vw, 20px);
 }
 
 .flies-nav:hover {
-  filter: brightness(1.08);
+  background: rgba(0, 0, 0, 0.55);
+  border-color: rgba(255, 255, 255, 0.5);
+  filter: brightness(1.15);
 }
 
 .flies-nav:active {
-  transform: translateY(4px);
-  box-shadow: 0 0 0 #1c7fa6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  transform: translateY(-50%) scale(0.94);
 }

@@ -1,13 +1,14 @@
-import type { JSX } from 'react';
+import { useState, type JSX } from 'react';
 import explaining from '../assets/tutorial/nanay_Sita/explaining.png';
 import '../Design/about-game.css';
 
 const AboutGame = (): JSX.Element => {
+    const [expanded, setExpanded] = useState<boolean>(false);
     return (
         <>
         <div className='Title-part'>GAME INTRODUCTION</div>
         <div className='about-game'>
-            <div className='about-content'>
+            <div className={`about-content ${!expanded ? 'collapsed' : ''}`}>
                 <h2>Welcome to Vanessa-on-the-loose</h2>
                 <p>
                     Vanessa-on-the-loose is a fast-paced, pixel-style market management game where you run a food stall at the most chaotic markets across the Philippines. Armed with a fly swatter and a handful of upgradeable skills, you must protect your food from relentless swarms, serve hungry customers, and survive as many market days as possible without going broke.
@@ -79,6 +80,9 @@ const AboutGame = (): JSX.Element => {
                     Grab your swatter. Protect your stall. Make your profit.
                 </p>
             </div>
+            <button className='about-read-more' onClick={() => setExpanded((e) => !e)}>
+                {expanded ? 'Show less ▴' : 'Tap to read more ▾'}
+            </button>
             <div className='about-image'>
                 <img src={explaining} alt="Nanay Sita explaining" />
             </div>
