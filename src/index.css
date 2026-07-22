@@ -42,6 +42,8 @@
 
 html {
   font-size: clamp(14px, calc(0.875rem + 0.25vw), 16px);
+  scroll-padding-top: 72px;
+  scroll-behavior: smooth;
 }
 
 html,

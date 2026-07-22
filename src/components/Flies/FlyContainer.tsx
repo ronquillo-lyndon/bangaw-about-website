@@ -8,14 +8,14 @@ type FlyContainerProps = {
 const FlyContainer = ({ fly }: FlyContainerProps): JSX.Element => {
     const [actionIndex, setActionIndex] = useState<number>(0);
     const [frameIndex, setFrameIndex] = useState<number>(0);
-    const [playing, setPlaying] = useState<boolean>(false);
+    const [playing, setPlaying] = useState<boolean>(true);
 
     const action = fly.actions[actionIndex];
     const frameCount = Math.max(1, action.frame || 1);
 
     useEffect(() => {
         setFrameIndex(0);
-        setPlaying(false);
+        setPlaying(true);
     }, [actionIndex]);
 
     useEffect(() => {

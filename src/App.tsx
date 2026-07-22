@@ -4,6 +4,8 @@ import HomePage from './components/HomePage';
 import AboutGame from './components/AboutGame';
 import FliesContainer from './components/Flies/FliesContainer';
 import SketchesContainer from './components/Sketch/SketchesContainer';
+import Navbar from './components/Navbar';
+
 function App():JSX.Element {
   const [showSplash, setShowSplash] = useState<boolean>(true);
   return (
@@ -11,12 +13,23 @@ function App():JSX.Element {
       {showSplash ? (
         <SplashScreen setShowSplash={() => setShowSplash(false)}/>
         ) : (
-          <main>
-            <HomePage />
-            <AboutGame />
-            <FliesContainer />
-            <SketchesContainer />
-          </main>
+          <>
+            <Navbar />
+            <main>
+              <div id='home'>
+                <HomePage />
+              </div>
+              <div id='about'>
+                <AboutGame />
+              </div>
+              <div id='flies'>
+                <FliesContainer />
+              </div>
+              <div id='sketches'>
+                <SketchesContainer />
+              </div>
+            </main>
+          </>
         )}
     </>
   )
