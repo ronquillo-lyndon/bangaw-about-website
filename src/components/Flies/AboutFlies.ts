@@ -874,7 +874,7 @@ const Flies:Fly[] = [
             {
                 action_name: "fly_poison",
                 location: poison_boss_fly,
-                frame: 18
+                frame: 9
             },
             {
                 action_name: "flying",
@@ -894,7 +894,7 @@ const Flies:Fly[] = [
             {
                 action_name: "shockwave",
                 location: shockwave_effect_fly,
-                frame: 22
+                frame: 14
             },
             {
                 action_name: "stun",
