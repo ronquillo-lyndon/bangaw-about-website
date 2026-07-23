@@ -6,6 +6,8 @@ import boss_revive from '../../assets/Flies/boss/boss_revive.png'
 import boss_shockwave from '../../assets/Flies/boss/boss_shockwave.png'
 import boss_stun from '../../assets/Flies/boss/boss_stun.png'
 import boss_summon from '../../assets/Flies/boss/boss_summon.png'
+import poison_boss_fly from '../../assets/Flies/boss/poison_boss_fly.png'
+import shockwave_effect_fly from '../../assets/Flies/boss/shockwave_effect_fly.png'
 import small_fly_eating from '../../assets/Flies/small_fly/small_fly_eating.png'
 import small_fly_flying from '../../assets/Flies/small_fly/small_fly_flying.png'
 import fly_eating from '../../assets/Flies/default_fly/fly_eating.png'
@@ -873,7 +875,7 @@ const Flies:Fly[] = [
             },
             {
                 action_name: "fly_poison",
-                location: boss_fly_poison,
+                location: poison_boss_fly,
                 frame: 18
             },
             {
@@ -893,7 +895,7 @@ const Flies:Fly[] = [
             },
             {
                 action_name: "shockwave",
-                location: boss_shockwave,
+                location: shockwave_effect_fly,
                 frame: 22
             },
             {
